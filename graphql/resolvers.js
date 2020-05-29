@@ -1,9 +1,8 @@
-const { people, getById } = require("./db");
+const { searchMovies } = require("../api/tmdb.js");
 
 const resolvers = {
   Query: {
-    people: () => people,
-    person: id => getById(id),
+    movies: (_, { keyword }) => searchMovies(keyword),
   },
 };
 
