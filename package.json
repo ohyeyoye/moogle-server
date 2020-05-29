@@ -1,7 +1,13 @@
 {
   "name": "movie-api-graphql",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "author": "ohyeyoye <33212292+ohyeyoye@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  },
+  "scripts": {
+    "start": "nodemon"
+  }
 }
