@@ -4,6 +4,10 @@
   "main": "server.js",
   "author": "ohyeyoye <33212292+ohyeyoye@users.noreply.github.com>",
   "license": "MIT",
+  "engines": {
+    "npm": "6.13.4",
+    "node": "12.16.1"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
