@@ -1,6 +1,9 @@
+const { people, getById } = require("./db");
+
 const resolvers = {
   Query: {
-    name: () => "Sangjun",
+    people: () => people,
+    person: id => getById(id),
   },
 };
 
