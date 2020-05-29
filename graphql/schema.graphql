@@ -1,10 +1,13 @@
 type Movie {
   id: Int!
   title: String!
+  overview: String!
   rating: Float!
   release_date: String!
+  poster_path: String
 }
 
 type Query {
   movies(keyword: String!): [Movie]
+  movie(id: Int!): Movie
 }
