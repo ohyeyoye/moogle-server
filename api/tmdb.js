@@ -32,7 +32,7 @@ const searchMovies = keyword => {
           overview,
           rating: vote_average,
           release_date,
-          poster_path: posterPathBaseURL + poster_path,
+          poster_path: poster_path ? posterPathBaseURL + poster_path : null,
         });
       });
       return movies;
