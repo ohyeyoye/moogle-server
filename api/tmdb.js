@@ -1,7 +1,9 @@
 const API_KEY = process.env.TMDB_API_KEY;
 const axios = require("axios");
+const isEmpty = require("is-empty");
 
 const searchMovies = keyword => {
+  if (isEmpty(keyword)) return [];
   const url = "https://api.themoviedb.org/3/search/movie";
   const config = {
     params: {
