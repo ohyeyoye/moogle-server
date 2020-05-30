@@ -15,7 +15,6 @@ const searchMovies = keyword => {
     .get(url, config)
     .then(res => {
       const { results } = res.data;
-      const posterPathBaseURL = "http://image.tmdb.org/t/p/w500";
       let movies = [];
       results.map(result => {
         const {
@@ -26,13 +25,16 @@ const searchMovies = keyword => {
           release_date,
           poster_path,
         } = result;
+        const posterPath = poster_path
+          ? "http://image.tmdb.org/t/p/w500" + poster_path
+          : null;
         movies.push({
           id,
           title,
           overview,
           rating: vote_average,
           release_date,
-          poster_path: poster_path ? posterPathBaseURL + poster_path : null,
+          poster_path: posterPath,
         });
       });
       return movies;
